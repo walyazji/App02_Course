@@ -23,14 +23,14 @@ class _SliderAppState extends State<SliderApp> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
+              transform: Matrix4.rotationZ(-20 * (pi / 180))
+                ..translate(val, val, val),
               width: 300,
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
               decoration: BoxDecoration(
                 boxShadow: const [
                   BoxShadow(
-                      blurRadius: 8,
-                      color: Colors.black26,
-                      offset: Offset(0, 2)),
+                      blurRadius: 68, color: Colors.blue, offset: Offset(0, 2)),
                 ],
                 color: Colors.deepOrange,
                 borderRadius: BorderRadius.circular(20),
@@ -50,11 +50,14 @@ class _SliderAppState extends State<SliderApp> {
                 fontSize: 35,
               ),
             ),
+            const SizedBox(
+              height: 10,
+            ),
             Slider(
               value: val,
               onChanged: (double value) => setState(() => val = value),
               min: 0,
-              max: 500,
+              max: 180,
               divisions: 20,
               label: 'Value',
               activeColor: Colors.green,

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class SliderApp extends StatefulWidget {
@@ -21,9 +23,26 @@ class _SliderAppState extends State<SliderApp> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              color: Colors.amber,
-              height: val,
-              width: val,
+              width: 300,
+              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+              decoration: BoxDecoration(
+                boxShadow: const [
+                  BoxShadow(
+                      blurRadius: 8,
+                      color: Colors.black26,
+                      offset: Offset(0, 2)),
+                ],
+                color: Colors.deepOrange,
+                borderRadius: BorderRadius.circular(20),
+              ),
+              child: const Text(
+                'My Shop',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold),
+              ),
             ),
             Text(
               'Value = ${(val).round()}',

@@ -13,16 +13,7 @@ class TransformApp extends StatelessWidget {
         ),
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Transform.rotate(
-              angle: 90,
-              child: Container(
-                color: Colors.amber,
-                height: 500,
-                width: 500,
-              ),
-            ),
-          ],
+          children: <Widget>[],
         ),
       ),
     );
